@@ -1,0 +1,294 @@
+/*----------------------------------------------------------------*/
+/* ----------------------  Basic Set Up  -----------------------  */
+/*----------------------------------------------------------------*/
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', 'sans-serif';
+    font-weight: 300;
+    font-size: 40px;
+    text-rendering: optimizeLegibility;
+}
+
+/*----------------------------------------------------------------*/
+/* --------------------  Reusable Components  ------------------- */
+/*----------------------------------------------------------------*/
+
+.row {
+    margin: 0 auto;
+}
+
+/*----------------------------------------------------------------*/
+/*   ----------------------   Headings   ---------------------    */
+/*----------------------------------------------------------------*/
+
+
+.hero-text-box h1,
+h2, h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.hero-text-box h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #cacaca; !important;
+    text-align: center;
+    font-size: 200%;
+    word-spacing: 3px;
+    text-shadow: 2px 2px 2px black;
+    position: relative;
+
+}
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+h4 {
+    font-size: 90%;
+    color: #fafafa !important;
+    word-spacing: 3px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.second-box h3 {
+    text-align: right;
+}
+
+/*----------------------------------------------------------------*/
+/*   -------------------  Paragraphs   -----------------------    */
+/*----------------------------------------------------------------*/
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.long-copy1 {
+    line-height: 145%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+/*----------------------------------------------------------------*/
+/*   ----------------------   Buttons   ---------------------     */
+/*----------------------------------------------------------------*/
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    border-radius: 200px;
+    text-decoration: none;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #85b0d7;
+    border: 1px solid #85b0d7;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #85b0d7;
+    color: #85b0d7;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #85b0d7;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: transparent;
+    border: 1px solid #85b0d7;
+    color: #85b0d7;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #85b0d7;
+    color: #fff;
+}
+
+#button {
+   background-color: #85b0d7; !important;
+}
+
+/*----------------------------------------------------------------*/
+/*   ----------------------   Header   ---------------------      */
+/*----------------------------------------------------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/succulents-003.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-text-box {
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    left: 35%;
+    tranform: translate(-50%, -50%)
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 0px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 5px 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 90%;
+    text-shadow: 1px 1px 2px black;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    text-shadow: 1px 1px 2px black;
+    border-bottom: 2px solid #85b0d7;
+}
+
+/*----------------------------------------------------------------*/
+/*  ------------------------ Section ---------------------------  */
+/*----------------------------------------------------------------*/
+
+section {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    background-color: #fdfdfd !important;
+}
+
+.top-section {
+    margin-bottom: 50px;
+}
+
+.twoDImage {
+    margin-bottom: 30px;
+}
+
+.content-box {
+    padding: 15px 0;
+    margin: 30px 0;
+    background-color: #f0f0f0; !important;
+    border: 1px solid green;
+    border-radius: 2px;
+}
+
+.thirdSection {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/succ-square-1500.jpg);
+    background-size: cover;
+    height: 125vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.first-box {
+    opacity: 0;
+    transform: translateX(-1200px);
+    transition: all 1.5s ease-out;
+}
+.first-box.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+    position: absolute;
+}
+
+.second-box {
+    opacity: 0;
+    transform: translateX(1200px);
+    transition: all 1.5s ease-out;
+}
+
+.second-box.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.third-box {
+    opacity: 0;
+    transform: translateX(-1200px);
+    transition: all 1.5s ease-out;
+}
+.third-box.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    right:0 !important;
+}
+
+
+/*----------------------------------------------------------------*/
+/* ------------------------  Footer ----------------------------- */
+/*----------------------------------------------------------------*/
+
+
+Footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/Green-leaves-of-aloe-plant-close-up.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.sign-up {
+    position: relative;
+    top: 55%;
+    left: 12%;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+
+
+
+
+
+
