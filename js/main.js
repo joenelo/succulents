@@ -23,7 +23,6 @@ $(document).ready(function(){
     // build scene and set duration to window height
     var scene = new ScrollMagic.Scene({triggerElement: "#top-section", duration: "100%"})
         .setTween(tween)
-        .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 
     //-----------------------------------------------//
@@ -41,11 +40,6 @@ $(document).ready(function(){
         triggerHook: 0.3
     })
         .setTween(swipe1Tween)
-        .addIndicators({
-            name: 'info box movements',
-            colorTrigger: 'black',
-            colorStart: 'blue'
-        })
         .addTo(controller);
 
 
@@ -60,15 +54,10 @@ $(document).ready(function(){
         triggerHook: 0.4
     })
         .setTween(swipe2Tween)
-        .addIndicators({
-           name: 'second box slide in',
-    colorTrigger: 'black',
-        colorStart: 'pink'
-        })
         .addTo(controller);
 
 
-// ----  build tween for  Show Me More 2 box ----- //
+// ----  build tween for  Show Me More 3 box ----- //
     var swipe3Tween = TweenMax.from("#show-me-more-3", 1.5,
         {x: -1200, autoAlpha: 0}
     );
@@ -78,11 +67,6 @@ $(document).ready(function(){
         triggerHook: 0.3
     })
         .setTween(swipe3Tween)
-        .addIndicators({
-            name: 'third slide in',
-            colorTrigger: 'black',
-            colorStart: 'red'
-        })
         .addTo(controller);
 
 
