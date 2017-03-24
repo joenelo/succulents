@@ -6,41 +6,56 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>The Reluctant Succulents</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/foundation.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+
+
 
 </head>
 <body>
+
+<!------------------------------------------------------------------
+   ----------------------   Start of Header   ------------------
+------------------------------------------------------------------>
 <header>
     <nav>
-        <div class="row bar">
-            <div class="small-12 medium-4 columns">
+        <div class="nav-bar-wrapper">
+
                 <img src="img/Logo1.png" alt="Reluctant Succulent Logo" class="logo">
-            </div>
-            <div class="small-12 medium-8 columns">
-                <ul class="main-nav">
+
+                <ul class="main-nav links">
                     <li><a href="#show-me-more">About Succulents</a></li>
                     <li><a href="#sign-up">Sign Up</a></li>
                 </ul>
             </div>
-        </div>
+
     </nav>
     <div class="hero-text-box">
-        <h1>Reluctant Succulents -<br> We grow slowly!</h1>
+        <h1>Reluctant<br> Succulents</h1>
         <a class="btn btn-full" href="#top-section">Let's Grow!</a>
         <a class="btn btn-ghost" href="#show-me-more">Show Me More</a>
     </div>
 </header>
+<!------------------------------------------------------------------
+   ----------------------   End of Header   ------------------
+------------------------------------------------------------------>
+
+
+<!------------------------------------------------------------------
+   ----------------------   Start of Body   ------------------
+------------------------------------------------------------------>
+
+
 
 <section>
+
+    <!-- About Information-->
     <div class="top-section" id="top-section">
         <div class="text-center">
-            <img src="img/succulentLineDrawing.png" width="8%", height="8%" class="twoDImage"
+            <img src="img/succulentLineDrawing.png" width="8%", height="8%" class="twoDImage" id="twoDImage"
                  alt="2D succulent line drawing">
+            </div>
         </div>
         <h2 class="text-center">Grow Succulents - Oh So Slowly</h2>
         <p class="long-copy">
@@ -49,6 +64,9 @@
             Succulents get their name because of the thick, fleshy, sap-filled leaves that are their trademark. These leaves allow them to hold and retain water more effectively than plants with thinner leaves.
         </p>
     </div>
+
+
+    <!-- Sliding plant divs-->
     <div class="thirdSection">
     <div class="row content-box first-box" id="show-me-more">
         <div class="small-12 medium-3 columns">
@@ -58,11 +76,12 @@
             <h3>They grow 365/Year</h3>
             <p class="long-copy1">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cum illo voluptatibus. Consequatur
+                neque quasi, quod sed tempore voluptatem! Asperiores assumenda consectetur eius. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cum illo voluptatibus. Consequatur
                 neque quasi, quod sed tempore voluptatem! Asperiores assumenda consectetur eius.
             </p>
         </div>
     </div>
-    <div class="row content-box second-box" id="show-me-more-two">
+    <div class="row content-box second-box" id="show-me-more-2">
         <div class="small-12 medium-9 columns">
             <h3>Seeds or Cuttings</h3>
             <p class="long-copy1">
@@ -73,7 +92,7 @@
             <img src="img/Haworthia%20cooperi2.jpg" alt="Short looking Succulent photo">
         </div>
     </div>
-    <div class="row content-box third-box" id="show-me-more-three">
+    <div class="row content-box third-box" id="show-me-more-3">
         <div class="small-12 medium-3  columns">
             <img src="img/aloewater.jpg" alt="Aloe dripping Succulent photo">
         </div>
@@ -88,6 +107,20 @@
     </div>
 
 </section>
+
+<!------------------------------------------------------------------
+   ----------------------   End of Body  ------------------
+------------------------------------------------------------------>
+
+
+
+
+<!------------------------------------------------------------------
+   ----------------------   Start of Footer  ------------------
+------------------------------------------------------------------>
+
+
+
 <footer>
     <form class="sign-up" id="sign-up">
         <div class="small-12 medium-4">
@@ -104,15 +137,22 @@
     </form>
 </footer>
 
+<!------------------------------------------------------------------
+   ----------------------   End of Footer  ------------------
+------------------------------------------------------------------>
+
 
 <script src="js/vendor/jquery.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script src="js/vendor/foundation.js"></script>
-
+<script src="js/main.js"></script>
 <script>
     $(document).foundation();
 </script>
-<script src="js/main.js"></script>
+
 </body>
 </html>

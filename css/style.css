@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+
 /*----------------------------------------------------------------*/
 /* ----------------------  Basic Set Up  -----------------------  */
 /*----------------------------------------------------------------*/
@@ -7,13 +9,9 @@ html {
     color: #555;
     font-family: 'Lato', 'Arial', 'sans-serif';
     font-weight: 300;
-    font-size: 40px;
+    /*font-size: 3.2rem;*/
     text-rendering: optimizeLegibility;
 }
-
-/*----------------------------------------------------------------*/
-/* --------------------  Reusable Components  ------------------- */
-/*----------------------------------------------------------------*/
 
 .row {
     margin: 0 auto;
@@ -30,17 +28,7 @@ h2, h3 {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-.hero-text-box h1 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #cacaca; !important;
-    text-align: center;
-    font-size: 200%;
-    word-spacing: 3px;
-    text-shadow: 2px 2px 2px black;
-    position: relative;
 
-}
 h2 {
     font-size: 180%;
     word-spacing: 2px;
@@ -97,8 +85,9 @@ h2:after {
 .btn:link,
 .btn:visited {
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 20px;
     font-weight: 300;
+    width: 150px;
     border-radius: 200px;
     text-decoration: none;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
@@ -140,6 +129,15 @@ h2:after {
    background-color: #85b0d7; !important;
 }
 
+@media only screen and (max-width: 336px) {
+.btn:link,
+.btn:visited {
+    margin: 0;
+    }
+}
+
+
+
 /*----------------------------------------------------------------*/
 /*   ----------------------   Header   ---------------------      */
 /*----------------------------------------------------------------*/
@@ -152,24 +150,41 @@ header {
 }
 
 .hero-text-box {
+
     position: absolute;
     text-align: center;
-    top: 65%;
-    left: 35%;
+    top: 55%;
+    margin: 0 auto;
+    width: 100%;
     tranform: translate(-50%, -50%)
+}
+.hero-text-box h1 {
+
+    margin-bottom: 10px;
+    color: #cacaca;
+    font-size: 5vw;
+    text-shadow: 2px 2px 2px black;
+    position: relative;
+    font-family: Courgette;
+    text-transform: none !important;
 }
 
 .logo {
     height: 100px;
     width: auto;
     float: left;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
-.main-nav {
+.main-nav.links {
     float: right;
+    margin-right: 75px;
     list-style: none;
     margin-top: 50px;
+}
+
+ul.main-nav {
+    margin-top: 69px !important;
 }
 
 .main-nav li {
@@ -194,13 +209,37 @@ header {
     border-bottom: 2px solid #85b0d7;
 }
 
+
+@media only screen and (max-width: 716px) {
+    .nav-bar-wrapper {
+        text-align: center;
+    }
+
+    .logo {
+        float: none;
+    }
+
+    .main-nav.links {
+        float: none;
+        margin-top: 20px !important;
+    }
+    .hero-text-box h1 {
+        font-size: 6vw;
+    }
+}
+@media only screen and (max-width: 336px) {
+    .hero-text-box h1 {
+        font-size: 10vw;
+    }
+}
+
 /*----------------------------------------------------------------*/
 /*  ------------------------ Section ---------------------------  */
 /*----------------------------------------------------------------*/
 
 section {
     padding-top: 80px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     background-color: #fdfdfd !important;
 }
 
@@ -223,46 +262,30 @@ section {
 .thirdSection {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/succ-square-1500.jpg);
     background-size: cover;
-    height: 125vh;
+    height: 108vh;
     padding-top: 30px;
     padding-bottom: 30px;
-
 }
 
-.first-box {
-    opacity: 0;
-    transform: translateX(-1200px);
-    transition: all 1.5s ease-out;
-}
-.first-box.fade-in {
-    opacity: 1;
-    transform: translateX(0);
-    position: absolute;
+#show-me-more, #show-me-more-2, #show-me-more-3{
+    right: 0 !important;
 }
 
-.second-box {
-    opacity: 0;
-    transform: translateX(1200px);
-    transition: all 1.5s ease-out;
+@media only screen and (max-width: 512px) {
+.thirdSection{
+    height: 110%
+}
 }
 
-.second-box.fade-in {
-    opacity: 1;
-    transform: translateX(0);
-}
 
-.third-box {
-    opacity: 0;
-    transform: translateX(-1200px);
-    transition: all 1.5s ease-out;
-}
-.third-box.fade-in {
-    opacity: 1;
-    transform: translateX(0);
-}
+@media only screen and (max-width: 336px) {
+ .thirdSection {
+     height: auto;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     margin: 0 auto;
 
-.fade-in {
-    right:0 !important;
+ }
 }
 
 
@@ -276,14 +299,34 @@ Footer {
     height: 100vh;
     width: 100%;
     background-size: cover;
+    position: absolute;
+}
+@media only screen and (max-width: 512px) {
+.sign-up {
+width: 50% !important;
+    }
+
+}
+
+
+@media only screen and (max-width: 336px) {
+    Footer {
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+    }
+
 }
 
 .sign-up {
-    position: relative;
+    position: absolute;
     top: 55%;
-    left: 12%;
     text-shadow: 1px 1px 1px black;
+    margin-left: 12%;
+    width: 100%;
 }
+
+
+
 
 
 
