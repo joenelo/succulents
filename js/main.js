@@ -107,4 +107,24 @@ $(document).ready(function(){
         .setPin('.third-box', {pushFollowers: false})
         .addTo(controller);
 
+
+//--------------------------------------//
+//-- Stagger Tween For Footer Section --//
+//--------------------------------------//
+
+var staggerIn = TweenMax.staggerFrom(".stagger", 2, {scale:0.5, opacity: 0, delay: 0.5, ease:Elastic.easeOut}, 0.2 );
+
+$(".button").click(function() {
+    TweenMax.staggerTo(".stagger", 0.5, {opacity: 0, y: -100, ease: Back.easeIn}, 0.1);
 });
+
+    var fadeOut = new ScrollMagic.Scene({
+        triggerElement: 'footer',
+        triggerHook: 'on leave'
+    })
+        .setTween(staggerIn)
+        .addTo(controller);
+
+
+})
+;
